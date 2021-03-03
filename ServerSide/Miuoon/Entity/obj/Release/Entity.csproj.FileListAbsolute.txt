@@ -1,0 +1,14 @@
+C:\Users\This_User\Desktop\bigProject\גיבוי אחרון\ServerSide\Miuoon\Entity\bin\Release\Hospital_DB.mdf
+C:\Users\This_User\Desktop\bigProject\גיבוי אחרון\ServerSide\Miuoon\Entity\bin\Release\Hospital_DB_log.ldf
+C:\Users\This_User\Desktop\bigProject\גיבוי אחרון\ServerSide\Miuoon\Entity\bin\Release\Entity.dll.config
+C:\Users\This_User\Desktop\bigProject\גיבוי אחרון\ServerSide\Miuoon\Entity\bin\Release\Entity.dll
+C:\Users\This_User\Desktop\bigProject\גיבוי אחרון\ServerSide\Miuoon\Entity\bin\Release\Entity.pdb
+C:\Users\This_User\Desktop\bigProject\גיבוי אחרון\ServerSide\Miuoon\Entity\bin\Release\EntityFramework.dll
+C:\Users\This_User\Desktop\bigProject\גיבוי אחרון\ServerSide\Miuoon\Entity\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\This_User\Desktop\bigProject\גיבוי אחרון\ServerSide\Miuoon\Entity\bin\Release\EntityFramework.xml
+C:\Users\This_User\Desktop\bigProject\גיבוי אחרון\ServerSide\Miuoon\Entity\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\This_User\Desktop\bigProject\גיבוי אחרון\ServerSide\Miuoon\Entity\obj\Release\Entity.csprojAssemblyReference.cache
+C:\Users\This_User\Desktop\bigProject\גיבוי אחרון\ServerSide\Miuoon\Entity\obj\Release\Entity.csproj.CoreCompileInputs.cache
+C:\Users\This_User\Desktop\bigProject\גיבוי אחרון\ServerSide\Miuoon\Entity\obj\Release\Entity.csproj.CopyComplete
+C:\Users\This_User\Desktop\bigProject\גיבוי אחרון\ServerSide\Miuoon\Entity\obj\Release\Entity.dll
+C:\Users\This_User\Desktop\bigProject\גיבוי אחרון\ServerSide\Miuoon\Entity\obj\Release\Entity.pdb

@@ -1,0 +1,56 @@
+﻿<Window x:Class="HospitalClient.DepartmentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HospitalClient"
+        mc:Ignorable="d"
+        Title="Departments" Height="450" Width="928">
+    <StackPanel Name="mainPanel" HorizontalAlignment="Left"  VerticalAlignment="Top">
+        <Grid ShowGridLines="False" Name="grdDepartment">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30"></ColumnDefinition>
+                <ColumnDefinition Width="30"></ColumnDefinition>
+                <ColumnDefinition Width="30"></ColumnDefinition>
+                <ColumnDefinition Width="30"></ColumnDefinition>
+                <ColumnDefinition Width="30"></ColumnDefinition>
+                <ColumnDefinition Width="30"></ColumnDefinition>
+                <ColumnDefinition Width="30"></ColumnDefinition>
+                <ColumnDefinition Width="30"></ColumnDefinition>
+                <ColumnDefinition Width="30"></ColumnDefinition>
+                <ColumnDefinition Width="30"></ColumnDefinition>
+                <ColumnDefinition Width="30"></ColumnDefinition>
+                <ColumnDefinition Width="30"></ColumnDefinition>
+                <ColumnDefinition Width="30"></ColumnDefinition>
+                <ColumnDefinition Width="30"></ColumnDefinition>
+                <ColumnDefinition Width="30"></ColumnDefinition>
+                <ColumnDefinition Width="30"></ColumnDefinition>
+                <ColumnDefinition Width="30"></ColumnDefinition>
+                <ColumnDefinition Width="30"></ColumnDefinition>
+                <ColumnDefinition Width="30"></ColumnDefinition>
+                <ColumnDefinition Width="30"></ColumnDefinition>
+                <ColumnDefinition Width="30"></ColumnDefinition>
+                <ColumnDefinition Width="30"></ColumnDefinition>
+                <ColumnDefinition Width="30"></ColumnDefinition>
+                <ColumnDefinition Width="30"></ColumnDefinition>
+                <ColumnDefinition Width="30"></ColumnDefinition>
+                <ColumnDefinition Width="30"></ColumnDefinition>
+               
+               
+
+            </Grid.ColumnDefinitions>
+            <Label Name="lblHospitalName" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="26"  FontSize="18"  HorizontalContentAlignment="Center"></Label>
+
+            <Label Grid.Row="2" Grid.Column="19" Grid.ColumnSpan="4" Content=" כניסת ממתין" FontSize="15"></Label>
+            <Label Grid.Row="2" Grid.Column="15" Grid.ColumnSpan="4" Content="יציאת ממתין " FontSize="15" ></Label>
+            <Label Grid.Row="2" Grid.Column="7" Grid.ColumnSpan="4"  Content=" כניסת  צוות  " FontSize="15"></Label>
+            <Label Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="4" Content="  יציאת  צוות  " FontSize="15"></Label>
+
+        </Grid>
+    </StackPanel>
+</Window>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6d2eedc9a4564b8e9d0d60aeb9bb2983" Name="Diagram1">
+        <EntityTypeShape EntityType="Hospital_DBModel.Departments" Width="2.625" PointX="4.5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Hospital_DBModel.DepartmentTypes" Width="1.875" PointX="1.875" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Hospital_DBModel.Hospitals" Width="1.5" PointX="5.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Hospital_DBModel.SeasonInformation" Width="2.125" PointX="7.625" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="Hospital_DBModel.FK__Departmen__BaseD__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="Hospital_DBModel.FK__Departmen__Depar__29572725" ManuallyRouted="false" />
+        <AssociationConnector Association="Hospital_DBModel.FK__Departmen__Hospi__36B12243" ManuallyRouted="false" />
+        <AssociationConnector Association="Hospital_DBModel.FK__SeasonInf__Depar__30F848ED" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Hospital_DBModel.Seasons" Width="2.125" PointX="7.75" PointY="4.5" />
+        <AssociationConnector Association="Hospital_DBModel.FK__SeasonInf__Seaso__300424B4" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

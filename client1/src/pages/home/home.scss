@@ -1,0 +1,39 @@
+page-home {
+ .item-input .label-md, .item-select .label-md, .item-datetime .label-md{
+     color:black;
+     width: 100%;
+    
+     padding-right: 0%;
+ }
+
+ .text-input .text-input-md{
+     width: 100%;
+     padding-right: 0px;
+ }
+
+ .label .label-md{
+    width: 100%;
+     padding-right:0px;
+ }
+
+ .item .item-block .item-md .item-input .item-label-floating .ng-pristine .ng-valid .ng-touched
+ {
+      width: 100%;
+     padding-right: 0px;
+     text-align: right;
+     margin: 0px;
+ }
+ #lbl-1 .input-wrapper .input-has-focus .item-input-has-focus{
+      width: 100%;
+     padding-right: 0px;
+     text-align: right;
+     margin: 0px;
+     background-color :red
+ }
+.searchbar-md-cancel .disable-hover .button-md .button-clear .button-clear-md .button-clear-md-dark{
+display: none;
+}
+
+}
+
+

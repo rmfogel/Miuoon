@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+     מיעון
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content  dir="rtl" no-bounce overflow-scroll="false">
+     <!-- hhhhh-->
+<img height="180" width="300" style="margin-right: 5%; margin-top: 5%" src="../../assets/imgs/logoMiun.png">
+
+  <!-- hhhh -->
+<ion-item>
+  <ion-searchbar   placeholder="נקודת המוצא - מיקום זה. הקלד לשינוי" style="outline: inherit;background: none;	color: inherit;
+		padding: 0;" [(ngModel)]="autocomplete.query" [showCancelButton]="true"  (ionInput)="updateSearch()" (ionCancel)="dismiss()"></ion-searchbar>
+</ion-item>
+<ion-list style="position: absolute;;
+z-index: 10;
+right: 2vh;
+left:0">
+  <ion-item *ngFor="let item of autocompleteItems" tappable (click)="chooseItem(item)">
+    {{item}}
+  </ion-item>
+ 
+</ion-list>
+    <ion-item >
+     <ion-label   style="display: block">בית חולים מועדף </ion-label>
+    <ion-input dir="ltr"  type="text" autofocus="off" [(ngModel)]="preferredHospital.Name"></ion-input>
+     </ion-item>
+     <div style="margin-left:6%;text-align: left; display: block"  *ngFor="let item of getHospitalNames() | filterHospitalList:preferredHospital.Name" (click)="setPerferredHospital(item)">{{item.Name}}</div>
+    <ion-item>
+      <ion-label >סוג מיון</ion-label>
+      <ion-select [(ngModel)]="preferredDepartment.Code" interface="popover"> 
+         <ion-option  *ngFor="let item of getDepartmentList()"  [value]="item.Code" (click)="setPerferredDepartment(item)">{{item.Name}}</ion-option>
+      </ion-select>
+    </ion-item> 
+    
+    <ion-item>
+      <ion-label>מחלקת מיון</ion-label>
+      <ion-select [(ngModel)]="preferredWing.Code" interface="popover" >
+               <ion-option *ngFor="let item of getWingList()" [value]="item.Code" (click)="setPerferredWing(item)" >   {{item.Name}}    </ion-option>
+      </ion-select> 
+    </ion-item>
+     <ion-footer>
+    <button ion-button block round color="danger" style="margin-bottom: 30px;" (click)="presentResult()">חפש</button>
+    <!-- <button ion-button round (click)="redirect()"> GO » </button> --></ion-footer>
+</ion-content>

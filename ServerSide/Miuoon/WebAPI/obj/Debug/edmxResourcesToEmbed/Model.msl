@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Hospital_DBModelStoreContainer" CdmEntityContainer="Hospital_DBEntities">
+    <EntitySetMapping Name="Departments">
+      <EntityTypeMapping TypeName="Hospital_DBModel.Departments">
+        <MappingFragment StoreEntitySet="Departments">
+          <ScalarProperty Name="DepartmentCode" ColumnName="DepartmentCode" />
+          <ScalarProperty Name="DepartmentTypeCode" ColumnName="DepartmentTypeCode" />
+          <ScalarProperty Name="HospitalCode" ColumnName="HospitalCode" />
+          <ScalarProperty Name="BaseDepartmentCode" ColumnName="BaseDepartmentCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DepartmentTypes">
+      <EntityTypeMapping TypeName="Hospital_DBModel.DepartmentTypes">
+        <MappingFragment StoreEntitySet="DepartmentTypes">
+          <ScalarProperty Name="DepartmentTypeCode" ColumnName="DepartmentTypeCode" />
+          <ScalarProperty Name="DepartmentTypeName" ColumnName="DepartmentTypeName" />
+          <ScalarProperty Name="IsFirst" ColumnName="IsFirst" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hospitals">
+      <EntityTypeMapping TypeName="Hospital_DBModel.Hospitals">
+        <MappingFragment StoreEntitySet="Hospitals">
+          <ScalarProperty Name="HospitalCode" ColumnName="HospitalCode" />
+          <ScalarProperty Name="HospitalName" ColumnName="HospitalName" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="HouseNum" ColumnName="HouseNum" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SeasonInformation">
+      <EntityTypeMapping TypeName="Hospital_DBModel.SeasonInformation">
+        <MappingFragment StoreEntitySet="SeasonInformation">
+          <ScalarProperty Name="InfoCode" ColumnName="InfoCode" />
+          <ScalarProperty Name="SeasonCode" ColumnName="SeasonCode" />
+          <ScalarProperty Name="StaffAvg" ColumnName="StaffAvg" />
+          <ScalarProperty Name="WaitingTimeAvg" ColumnName="WaitingTimeAvg" />
+          <ScalarProperty Name="WaitersAvg" ColumnName="WaitersAvg" />
+          <ScalarProperty Name="Ishistory" ColumnName="Ishistory" />
+          <ScalarProperty Name="DepartmentCode" ColumnName="DepartmentCode" />
+          <ScalarProperty Name="Whidnesstochange" ColumnName="Whidnesstochange" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Seasons">
+      <EntityTypeMapping TypeName="Hospital_DBModel.Seasons">
+        <MappingFragment StoreEntitySet="Seasons">
+          <ScalarProperty Name="SeasonCode" ColumnName="SeasonCode" />
+          <ScalarProperty Name="SeasonName" ColumnName="SeasonName" />
+          <ScalarProperty Name="HebrewDate" ColumnName="HebrewDate" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="DayOfWeek" ColumnName="DayOfWeek" />
+          <ScalarProperty Name="NumOfDays" ColumnName="NumOfDays" />
+          <ScalarProperty Name="IsDefined" ColumnName="IsDefined" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

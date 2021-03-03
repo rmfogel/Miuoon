@@ -1,0 +1,48 @@
+C:\Users\This_User\Dropbox\HospitalClient\HospitalClient\obj\Debug\MainWindow.g.cs
+C:\Users\This_User\Dropbox\HospitalClient\HospitalClient\obj\Debug\App.g.cs
+C:\Users\This_User\Dropbox\HospitalClient\HospitalClient\obj\Debug\HospitalClient_MarkupCompile.cache
+C:\Users\This_User\Dropbox\HospitalClient\HospitalClient\obj\Debug\HospitalClient_MarkupCompile.lref
+C:\Users\This_User\Dropbox\HospitalClient\HospitalClient\bin\Debug\HospitalClient.exe.config
+C:\Users\This_User\Dropbox\HospitalClient\HospitalClient\bin\Debug\HospitalClient.exe
+C:\Users\This_User\Dropbox\HospitalClient\HospitalClient\bin\Debug\HospitalClient.pdb
+C:\Users\This_User\Dropbox\HospitalClient\HospitalClient\bin\Debug\Newtonsoft.Json.dll
+C:\Users\This_User\Dropbox\HospitalClient\HospitalClient\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\This_User\Dropbox\HospitalClient\HospitalClient\bin\Debug\Newtonsoft.Json.xml
+C:\Users\This_User\Dropbox\HospitalClient\HospitalClient\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\This_User\Dropbox\HospitalClient\HospitalClient\obj\Debug\MainWindow.baml
+C:\Users\This_User\Dropbox\HospitalClient\HospitalClient\obj\Debug\HospitalClient.g.resources
+C:\Users\This_User\Dropbox\HospitalClient\HospitalClient\obj\Debug\HospitalClient.Properties.Resources.resources
+C:\Users\This_User\Dropbox\HospitalClient\HospitalClient\obj\Debug\HospitalClient.csproj.GenerateResource.cache
+C:\Users\This_User\Dropbox\HospitalClient\HospitalClient\obj\Debug\HospitalClient.csproj.CoreCompileInputs.cache
+C:\Users\This_User\Dropbox\HospitalClient\HospitalClient\obj\Debug\HospitalClient.csproj.CopyComplete
+C:\Users\This_User\Dropbox\HospitalClient\HospitalClient\obj\Debug\HospitalClient.exe
+C:\Users\This_User\Dropbox\HospitalClient\HospitalClient\obj\Debug\HospitalClient.pdb
+C:\Users\This_User\Dropbox\HospitalClient\HospitalClient\obj\Debug\DepartmentWindow.g.cs
+C:\Users\This_User\Dropbox\HospitalClient\HospitalClient\obj\Debug\DepartmentWindow.baml
+C:\Users\This_User\Dropbox\HospitalClient\HospitalClient\obj\Debug\HospitalClient.csprojAssemblyReference.cache
+C:\Users\This_User\Dropbox\HospitalClient\HospitalClient\obj\Debug\DepartmentUCtr.g.cs
+C:\Users\This_User\Dropbox\HospitalClient\HospitalClient\obj\Debug\DepartmentUCtr.baml
+C:\Users\This_User\Desktop\bigProject\גיבוי אחרון\HospitalClient\HospitalClient\bin\Debug\HospitalClient.exe.config
+C:\Users\This_User\Desktop\bigProject\גיבוי אחרון\HospitalClient\HospitalClient\bin\Debug\HospitalClient.exe
+C:\Users\This_User\Desktop\bigProject\גיבוי אחרון\HospitalClient\HospitalClient\bin\Debug\HospitalClient.pdb
+C:\Users\This_User\Desktop\bigProject\גיבוי אחרון\HospitalClient\HospitalClient\bin\Debug\Newtonsoft.Json.dll
+C:\Users\This_User\Desktop\bigProject\גיבוי אחרון\HospitalClient\HospitalClient\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\This_User\Desktop\bigProject\גיבוי אחרון\HospitalClient\HospitalClient\bin\Debug\Newtonsoft.Json.xml
+C:\Users\This_User\Desktop\bigProject\גיבוי אחרון\HospitalClient\HospitalClient\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\This_User\Desktop\bigProject\גיבוי אחרון\HospitalClient\HospitalClient\obj\Debug\HospitalClient.csprojAssemblyReference.cache
+C:\Users\This_User\Desktop\bigProject\גיבוי אחרון\HospitalClient\HospitalClient\obj\Debug\DepartmentUCtr.g.cs
+C:\Users\This_User\Desktop\bigProject\גיבוי אחרון\HospitalClient\HospitalClient\obj\Debug\DepartmentWindow.g.cs
+C:\Users\This_User\Desktop\bigProject\גיבוי אחרון\HospitalClient\HospitalClient\obj\Debug\MainWindow.g.cs
+C:\Users\This_User\Desktop\bigProject\גיבוי אחרון\HospitalClient\HospitalClient\obj\Debug\App.g.cs
+C:\Users\This_User\Desktop\bigProject\גיבוי אחרון\HospitalClient\HospitalClient\obj\Debug\HospitalClient_MarkupCompile.cache
+C:\Users\This_User\Desktop\bigProject\גיבוי אחרון\HospitalClient\HospitalClient\obj\Debug\HospitalClient_MarkupCompile.lref
+C:\Users\This_User\Desktop\bigProject\גיבוי אחרון\HospitalClient\HospitalClient\obj\Debug\DepartmentUCtr.baml
+C:\Users\This_User\Desktop\bigProject\גיבוי אחרון\HospitalClient\HospitalClient\obj\Debug\DepartmentWindow.baml
+C:\Users\This_User\Desktop\bigProject\גיבוי אחרון\HospitalClient\HospitalClient\obj\Debug\MainWindow.baml
+C:\Users\This_User\Desktop\bigProject\גיבוי אחרון\HospitalClient\HospitalClient\obj\Debug\HospitalClient.g.resources
+C:\Users\This_User\Desktop\bigProject\גיבוי אחרון\HospitalClient\HospitalClient\obj\Debug\HospitalClient.Properties.Resources.resources
+C:\Users\This_User\Desktop\bigProject\גיבוי אחרון\HospitalClient\HospitalClient\obj\Debug\HospitalClient.csproj.GenerateResource.cache
+C:\Users\This_User\Desktop\bigProject\גיבוי אחרון\HospitalClient\HospitalClient\obj\Debug\HospitalClient.csproj.CoreCompileInputs.cache
+C:\Users\This_User\Desktop\bigProject\גיבוי אחרון\HospitalClient\HospitalClient\obj\Debug\HospitalClient.csproj.CopyComplete
+C:\Users\This_User\Desktop\bigProject\גיבוי אחרון\HospitalClient\HospitalClient\obj\Debug\HospitalClient.exe
+C:\Users\This_User\Desktop\bigProject\גיבוי אחרון\HospitalClient\HospitalClient\obj\Debug\HospitalClient.pdb

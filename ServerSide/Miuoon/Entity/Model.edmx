@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Hospital_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Departments">
+          <Key>
+            <PropertyRef Name="DepartmentCode" />
+          </Key>
+          <Property Name="DepartmentCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DepartmentTypeCode" Type="int" Nullable="false" />
+          <Property Name="HospitalCode" Type="int" Nullable="false" />
+          <Property Name="BaseDepartmentCode" Type="int" />
+        </EntityType>
+        <EntityType Name="DepartmentTypes">
+          <Key>
+            <PropertyRef Name="DepartmentTypeCode" />
+          </Key>
+          <Property Name="DepartmentTypeCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DepartmentTypeName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IsFirst" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Hospitals">
+          <Key>
+            <PropertyRef Name="HospitalCode" />
+          </Key>
+          <Property Name="HospitalCode" Type="int" Nullable="false" />
+          <Property Name="HospitalName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="City" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Street" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="HouseNum" Type="int" />
+          <Property Name="Country" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SeasonInformation">
+          <Key>
+            <PropertyRef Name="InfoCode" />
+          </Key>
+          <Property Name="InfoCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SeasonCode" Type="int" Nullable="false" />
+          <Property Name="StaffAvg" Type="int" Nullable="false" />
+          <Property Name="WaitingTimeAvg" Type="int" Nullable="false" />
+          <Property Name="WaitersAvg" Type="int" Nullable="false" />
+          <Property Name="Ishistory" Type="bit" Nullable="false" />
+          <Property Name="DepartmentCode" Type="int" Nullable="false" />
+          <Property Name="Whidnesstochange" Type="int" Nullable="false" />
+          <Property Name="AddingDate" Type="date" />
+        </EntityType>
+        <EntityType Name="Seasons">
+          <Key>
+            <PropertyRef Name="SeasonCode" />
+          </Key>
+          <Property Name="SeasonCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SeasonName" Type="nvarchar" MaxLength="50" />
+          <Property Name="HebrewDate" Type="date" />
+          <Property Name="Date" Type="date" />
+          <Property Name="DayOfWeek" Type="int" />
+          <Property Name="NumOfDays" Type="int" Nullable="false" />
+          <Property Name="IsDefined" Type="bit" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__Departmen__BaseD__47DBAE45">
+          <End Role="Departments" Type="Self.Departments" Multiplicity="0..1" />
+          <End Role="Departments1" Type="Self.Departments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departments">
+              <PropertyRef Name="DepartmentCode" />
+            </Principal>
+            <Dependent Role="Departments1">
+              <PropertyRef Name="BaseDepartmentCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Departmen__Depar__29572725">
+          <End Role="DepartmentTypes" Type="Self.DepartmentTypes" Multiplicity="1" />
+          <End Role="Departments" Type="Self.Departments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DepartmentTypes">
+              <PropertyRef Name="DepartmentTypeCode" />
+            </Principal>
+            <Dependent Role="Departments">
+              <PropertyRef Name="DepartmentTypeCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Departmen__Hospi__36B12243">
+          <End Role="Hospitals" Type="Self.Hospitals" Multiplicity="1" />
+          <End Role="Departments" Type="Self.Departments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Hospitals">
+              <PropertyRef Name="HospitalCode" />
+            </Principal>
+            <Dependent Role="Departments">
+              <PropertyRef Name="HospitalCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SeasonInf__Depar__30F848ED">
+          <End Role="Departments" Type="Self.Departments" Multiplicity="1" />
+          <End Role="SeasonInformation" Type="Self.SeasonInformation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departments">
+              <PropertyRef Name="DepartmentCode" />
+            </Principal>
+            <Dependent Role="SeasonInformation">
+              <PropertyRef Name="DepartmentCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SeasonInf__Seaso__300424B4">
+          <End Role="Seasons" Type="Self.Seasons" Multiplicity="1" />
+          <End Role="SeasonInformation" Type="Self.SeasonInformation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Seasons">
+              <PropertyRef Name="SeasonCode" />
+            </Principal>
+            <Dependent Role="SeasonInformation">
+              <PropertyRef Name="SeasonCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Hospital_DBModelStoreContainer">
+          <EntitySet Name="Departments" EntityType="Self.Departments" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DepartmentTypes" EntityType="Self.DepartmentTypes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Hospitals" EntityType="Self.Hospitals" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SeasonInformation" EntityType="Self.SeasonInformation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Seasons" EntityType="Self.Seasons" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Departmen__BaseD__47DBAE45" Association="Self.FK__Departmen__BaseD__47DBAE45">
+            <End Role="Departments" EntitySet="Departments" />
+            <End Role="Departments1" EntitySet="Departments" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Departmen__Depar__29572725" Association="Self.FK__Departmen__Depar__29572725">
+            <End Role="DepartmentTypes" EntitySet="DepartmentTypes" />
+            <End Role="Departments" EntitySet="Departments" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Departmen__Hospi__36B12243" Association="Self.FK__Departmen__Hospi__36B12243">
+            <End Role="Hospitals" EntitySet="Hospitals" />
+            <End Role="Departments" EntitySet="Departments" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SeasonInf__Depar__30F848ED" Association="Self.FK__SeasonInf__Depar__30F848ED">
+            <End Role="Departments" EntitySet="Departments" />
+            <End Role="SeasonInformation" EntitySet="SeasonInformation" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SeasonInf__Seaso__300424B4" Association="Self.FK__SeasonInf__Seaso__300424B4">
+            <End Role="Seasons" EntitySet="Seasons" />
+            <End Role="SeasonInformation" EntitySet="SeasonInformation" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Hospital_DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Departments">
+          <Key>
+            <PropertyRef Name="DepartmentCode" />
+          </Key>
+          <Property Name="DepartmentCode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DepartmentTypeCode" Type="Int32" Nullable="false" />
+          <Property Name="HospitalCode" Type="Int32" Nullable="false" />
+          <Property Name="BaseDepartmentCode" Type="Int32" />
+          <NavigationProperty Name="Departments1" Relationship="Self.FK__Departmen__BaseD__47DBAE45" FromRole="Departments" ToRole="Departments1" />
+          <NavigationProperty Name="Departments2" Relationship="Self.FK__Departmen__BaseD__47DBAE45" FromRole="Departments1" ToRole="Departments" />
+          <NavigationProperty Name="DepartmentTypes" Relationship="Self.FK__Departmen__Depar__29572725" FromRole="Departments" ToRole="DepartmentTypes" />
+          <NavigationProperty Name="Hospitals" Relationship="Self.FK__Departmen__Hospi__36B12243" FromRole="Departments" ToRole="Hospitals" />
+          <NavigationProperty Name="SeasonInformation" Relationship="Self.FK__SeasonInf__Depar__30F848ED" FromRole="Departments" ToRole="SeasonInformation" />
+        </EntityType>
+        <EntityType Name="DepartmentTypes">
+          <Key>
+            <PropertyRef Name="DepartmentTypeCode" />
+          </Key>
+          <Property Name="DepartmentTypeCode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DepartmentTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IsFirst" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Departments" Relationship="Self.FK__Departmen__Depar__29572725" FromRole="DepartmentTypes" ToRole="Departments" />
+        </EntityType>
+        <EntityType Name="Hospitals">
+          <Key>
+            <PropertyRef Name="HospitalCode" />
+          </Key>
+          <Property Name="HospitalCode" Type="Int32" Nullable="false" />
+          <Property Name="HospitalName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Street" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="HouseNum" Type="Int32" />
+          <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Departments" Relationship="Self.FK__Departmen__Hospi__36B12243" FromRole="Hospitals" ToRole="Departments" />
+        </EntityType>
+        <EntityType Name="SeasonInformation">
+          <Key>
+            <PropertyRef Name="InfoCode" />
+          </Key>
+          <Property Name="InfoCode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SeasonCode" Type="Int32" Nullable="false" />
+          <Property Name="StaffAvg" Type="Int32" Nullable="false" />
+          <Property Name="WaitingTimeAvg" Type="Int32" Nullable="false" />
+          <Property Name="WaitersAvg" Type="Int32" Nullable="false" />
+          <Property Name="Ishistory" Type="Boolean" Nullable="false" />
+          <Property Name="DepartmentCode" Type="Int32" Nullable="false" />
+          <Property Name="Whidnesstochange" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Departments" Relationship="Self.FK__SeasonInf__Depar__30F848ED" FromRole="SeasonInformation" ToRole="Departments" />
+          <NavigationProperty Name="Seasons" Relationship="Hospital_DBModel.FK__SeasonInf__Seaso__300424B4" FromRole="SeasonInformation" ToRole="Seasons" />
+          <Property Name="AddingDate" Type="DateTime" Precision="0" />
+        </EntityType>
+        <Association Name="FK__Departmen__BaseD__47DBAE45">
+          <End Role="Departments" Type="Self.Departments" Multiplicity="0..1" />
+          <End Role="Departments1" Type="Self.Departments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departments">
+              <PropertyRef Name="DepartmentCode" />
+            </Principal>
+            <Dependent Role="Departments1">
+              <PropertyRef Name="BaseDepartmentCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Departmen__Depar__29572725">
+          <End Role="DepartmentTypes" Type="Self.DepartmentTypes" Multiplicity="1" />
+          <End Role="Departments" Type="Self.Departments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DepartmentTypes">
+              <PropertyRef Name="DepartmentTypeCode" />
+            </Principal>
+            <Dependent Role="Departments">
+              <PropertyRef Name="DepartmentTypeCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Departmen__Hospi__36B12243">
+          <End Role="Hospitals" Type="Self.Hospitals" Multiplicity="1" />
+          <End Role="Departments" Type="Self.Departments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Hospitals">
+              <PropertyRef Name="HospitalCode" />
+            </Principal>
+            <Dependent Role="Departments">
+              <PropertyRef Name="HospitalCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SeasonInf__Depar__30F848ED">
+          <End Role="Departments" Type="Self.Departments" Multiplicity="1" />
+          <End Role="SeasonInformation" Type="Self.SeasonInformation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Departments">
+              <PropertyRef Name="DepartmentCode" />
+            </Principal>
+            <Dependent Role="SeasonInformation">
+              <PropertyRef Name="DepartmentCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Hospital_DBEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Departments" EntityType="Self.Departments" />
+          <EntitySet Name="DepartmentTypes" EntityType="Self.DepartmentTypes" />
+          <EntitySet Name="Hospitals" EntityType="Self.Hospitals" />
+          <EntitySet Name="SeasonInformation" EntityType="Self.SeasonInformation" />
+          <AssociationSet Name="FK__Departmen__BaseD__47DBAE45" Association="Self.FK__Departmen__BaseD__47DBAE45">
+            <End Role="Departments" EntitySet="Departments" />
+            <End Role="Departments1" EntitySet="Departments" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Departmen__Depar__29572725" Association="Self.FK__Departmen__Depar__29572725">
+            <End Role="DepartmentTypes" EntitySet="DepartmentTypes" />
+            <End Role="Departments" EntitySet="Departments" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Departmen__Hospi__36B12243" Association="Self.FK__Departmen__Hospi__36B12243">
+            <End Role="Hospitals" EntitySet="Hospitals" />
+            <End Role="Departments" EntitySet="Departments" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SeasonInf__Depar__30F848ED" Association="Self.FK__SeasonInf__Depar__30F848ED">
+            <End Role="Departments" EntitySet="Departments" />
+            <End Role="SeasonInformation" EntitySet="SeasonInformation" />
+          </AssociationSet>
+          <EntitySet Name="Seasons" EntityType="Hospital_DBModel.Seasons" />
+          <AssociationSet Name="FK__SeasonInf__Seaso__300424B4" Association="Hospital_DBModel.FK__SeasonInf__Seaso__300424B4">
+            <End Role="Seasons" EntitySet="Seasons" />
+            <End Role="SeasonInformation" EntitySet="SeasonInformation" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Seasons">
+          <Key>
+            <PropertyRef Name="SeasonCode" />
+          </Key>
+          <Property Name="SeasonCode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SeasonName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HebrewDate" Type="DateTime" Precision="0" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="DayOfWeek" Type="Int32" />
+          <Property Name="NumOfDays" Type="Int32" Nullable="false" />
+          <Property Name="IsDefined" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="SeasonInformation" Relationship="Hospital_DBModel.FK__SeasonInf__Seaso__300424B4" FromRole="Seasons" ToRole="SeasonInformation" />
+        </EntityType>
+        <Association Name="FK__SeasonInf__Seaso__300424B4">
+          <End Type="Hospital_DBModel.Seasons" Role="Seasons" Multiplicity="1" />
+          <End Type="Hospital_DBModel.SeasonInformation" Role="SeasonInformation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Seasons">
+              <PropertyRef Name="SeasonCode" />
+            </Principal>
+            <Dependent Role="SeasonInformation">
+              <PropertyRef Name="SeasonCode" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Hospital_DBModelStoreContainer" CdmEntityContainer="Hospital_DBEntities2">
+          <EntitySetMapping Name="Departments">
+            <EntityTypeMapping TypeName="Hospital_DBModel.Departments">
+              <MappingFragment StoreEntitySet="Departments">
+                <ScalarProperty Name="DepartmentCode" ColumnName="DepartmentCode" />
+                <ScalarProperty Name="DepartmentTypeCode" ColumnName="DepartmentTypeCode" />
+                <ScalarProperty Name="HospitalCode" ColumnName="HospitalCode" />
+                <ScalarProperty Name="BaseDepartmentCode" ColumnName="BaseDepartmentCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DepartmentTypes">
+            <EntityTypeMapping TypeName="Hospital_DBModel.DepartmentTypes">
+              <MappingFragment StoreEntitySet="DepartmentTypes">
+                <ScalarProperty Name="DepartmentTypeCode" ColumnName="DepartmentTypeCode" />
+                <ScalarProperty Name="DepartmentTypeName" ColumnName="DepartmentTypeName" />
+                <ScalarProperty Name="IsFirst" ColumnName="IsFirst" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Hospitals">
+            <EntityTypeMapping TypeName="Hospital_DBModel.Hospitals">
+              <MappingFragment StoreEntitySet="Hospitals">
+                <ScalarProperty Name="HospitalCode" ColumnName="HospitalCode" />
+                <ScalarProperty Name="HospitalName" ColumnName="HospitalName" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Street" ColumnName="Street" />
+                <ScalarProperty Name="HouseNum" ColumnName="HouseNum" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SeasonInformation">
+            <EntityTypeMapping TypeName="Hospital_DBModel.SeasonInformation">
+              <MappingFragment StoreEntitySet="SeasonInformation">
+                <ScalarProperty Name="AddingDate" ColumnName="AddingDate" />
+                <ScalarProperty Name="InfoCode" ColumnName="InfoCode" />
+                <ScalarProperty Name="SeasonCode" ColumnName="SeasonCode" />
+                <ScalarProperty Name="StaffAvg" ColumnName="StaffAvg" />
+                <ScalarProperty Name="WaitingTimeAvg" ColumnName="WaitingTimeAvg" />
+                <ScalarProperty Name="WaitersAvg" ColumnName="WaitersAvg" />
+                <ScalarProperty Name="Ishistory" ColumnName="Ishistory" />
+                <ScalarProperty Name="DepartmentCode" ColumnName="DepartmentCode" />
+                <ScalarProperty Name="Whidnesstochange" ColumnName="Whidnesstochange" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Seasons">
+            <EntityTypeMapping TypeName="Hospital_DBModel.Seasons">
+              <MappingFragment StoreEntitySet="Seasons">
+                <ScalarProperty Name="IsDefined" ColumnName="IsDefined" />
+                <ScalarProperty Name="NumOfDays" ColumnName="NumOfDays" />
+                <ScalarProperty Name="DayOfWeek" ColumnName="DayOfWeek" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="HebrewDate" ColumnName="HebrewDate" />
+                <ScalarProperty Name="SeasonName" ColumnName="SeasonName" />
+                <ScalarProperty Name="SeasonCode" ColumnName="SeasonCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
